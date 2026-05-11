@@ -1,4 +1,8 @@
+
+
 ## Final-Labor (LABOR-9): `1-Final-LAB.ipynb`
+
+## TASK 1:
 
 **Pfad im Repository:** `lab_suite/labs/08_01_LABOR-9/1-Final-LAB.ipynb`
 
@@ -46,3 +50,10 @@ Nutze die **gespeicherten Spektren** bzw. die Plots im Notebook.
 - Technische Details (Replay-Keys, exakte Messpunkt-Bezeichnung am Aufbau) stehen in **`1-Final-LAB.ipynb`** — bei Abweichung zwischen Überschrift und Fließtext in einzelnen Messzellen gelten **tatsächlicher Messaufbau** und **Code-Kommentare** (gespeicherte Schlüsselnamen).
 - Kurze Laborformulierungen setzen Kontext aus Vorlesung/Übung voraus.
 - In der Abgabe kurz vermerken, welche Artefakte wo liegen (Replay-JSON, Screenshots, befüllte Auswertezellen, Links zu Fotos/Blockschaltbildern).
+
+## Final-Labor (LABOR-9): `2-Final-LAB.ipynb`
+
+## TASK 2:
+
+- Verwende ein geeignetes Notebook aus einer früheren Laborübung, um die Parameter S11 und S21 des 433MHz SAW Filters zu bestimmen. - Das Notebook soll im submission-folder dieser Übung abgelegt werden.
+
