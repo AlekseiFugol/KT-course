@@ -1,0 +1,2 @@
+Hat die NiceGUI App funktioniert? Im Falle nein, welche Probleme traten auf?  Die NiceGUI-App ist bei mir im Browser gestartet. Ich habe einen kurzen Text eingegeben. Danach haben sich die Codetabelle und der Huffman-Codebaum aktualisiert. Die NiceGUI-Umgebung funktioniert also.
+
