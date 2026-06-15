@@ -1,0 +1,66 @@
+# Fragebogen: Entropie-Analyse (entropy1.py)
+
+Nach dem Ausführen von `entropy1.py` mit eigenem Text in `sampletext.txt`:
+
+**Konsolenausgabe einfügen:** Nutze das Merge-Symbol in der Task-Card, um die Ausgabe aus `console_log.txt` hier einzufügen. Anschließend die Ausgabe **kommentieren**.
+
+---
+
+**1. Konsolenausgabe**
+
+Analyze the file:  C:\Fugol\KT-course\lab_suite\labs\01_02_Informationstheorie\submissions\sidedata/sampletext.txt
+
+-----File Contents:---------------------------------------------------
+Dies ist ein kurzer Beispieltext fuer die Entropieanalyse.
+
+Der Text enthaelt verschiedene Buchstaben, Leerzeichen und Satzzeichen.
+
+Die Verteilung der Zeichen beeinflusst die Entropie.
+Number of characters: 183
+Character Dictionary: {'D': 3, 'i': 16, 'e': 35, 's': 8, ' ': 20, 't': 12, 'n': 13, 'k': 1, 'u': 6, 'r': 10, 'z': 4, 'B': 2, 'p': 3, 'l': 5, 'x': 2, 'f': 2, 'd': 5, 'E': 2, 'o': 2, 'a': 5, 'y': 1, '.': 3, '\n': 2, 'T': 1, 'h': 6, 'v': 1, 'c': 5, 'b': 2, ',': 1, 'L': 1, 'S': 1, 'V': 1, 'g': 1, 'Z': 1}
+
+-------Table of characters:----------------
+ e     | cnt= 35    p=0.191   H=2.386 bit/char  H_av=0.456 bit/char
+       | cnt= 20    p=0.109   H=3.194 bit/char  H_av=0.349 bit/char
+ i     | cnt= 16    p=0.087   H=3.516 bit/char  H_av=0.307 bit/char
+ n     | cnt= 13    p=0.071   H=3.815 bit/char  H_av=0.271 bit/char
+ t     | cnt= 12    p=0.066   H=3.931 bit/char  H_av=0.258 bit/char
+ r     | cnt= 10    p=0.055   H=4.194 bit/char  H_av=0.229 bit/char
+ s     | cnt=  8    p=0.044   H=4.516 bit/char  H_av=0.197 bit/char
+ u     | cnt=  6    p=0.033   H=4.931 bit/char  H_av=0.162 bit/char
+ h     | cnt=  6    p=0.033   H=4.931 bit/char  H_av=0.162 bit/char
+ l     | cnt=  5    p=0.027   H=5.194 bit/char  H_av=0.142 bit/char
+ d     | cnt=  5    p=0.027   H=5.194 bit/char  H_av=0.142 bit/char
+ a     | cnt=  5    p=0.027   H=5.194 bit/char  H_av=0.142 bit/char
+ c     | cnt=  5    p=0.027   H=5.194 bit/char  H_av=0.142 bit/char
+ z     | cnt=  4    p=0.022   H=5.516 bit/char  H_av=0.121 bit/char
+ D     | cnt=  3    p=0.016   H=5.931 bit/char  H_av=0.097 bit/char
+ p     | cnt=  3    p=0.016   H=5.931 bit/char  H_av=0.097 bit/char
+ .     | cnt=  3    p=0.016   H=5.931 bit/char  H_av=0.097 bit/char
+ B     | cnt=  2    p=0.011   H=6.516 bit/char  H_av=0.071 bit/char
+ x     | cnt=  2    p=0.011   H=6.516 bit/char  H_av=0.071 bit/char
+ f     | cnt=  2    p=0.011   H=6.516 bit/char  H_av=0.071 bit/char
+ E     | cnt=  2    p=0.011   H=6.516 bit/char  H_av=0.071 bit/char
+ o     | cnt=  2    p=0.011   H=6.516 bit/char  H_av=0.071 bit/char
+ b'\n' | cnt=  2    p=0.011   H=6.516 bit/char  H_av=0.071 bit/char
+ b     | cnt=  2    p=0.011   H=6.516 bit/char  H_av=0.071 bit/char
+ k     | cnt=  1    p=0.005   H=7.516 bit/char  H_av=0.041 bit/char
+ y     | cnt=  1    p=0.005   H=7.516 bit/char  H_av=0.041 bit/char
+ T     | cnt=  1    p=0.005   H=7.516 bit/char  H_av=0.041 bit/char
+ v     | cnt=  1    p=0.005   H=7.516 bit/char  H_av=0.041 bit/char
+ ,     | cnt=  1    p=0.005   H=7.516 bit/char  H_av=0.041 bit/char
+ L     | cnt=  1    p=0.005   H=7.516 bit/char  H_av=0.041 bit/char
+ S     | cnt=  1    p=0.005   H=7.516 bit/char  H_av=0.041 bit/char
+ V     | cnt=  1    p=0.005   H=7.516 bit/char  H_av=0.041 bit/char
+ g     | cnt=  1    p=0.005   H=7.516 bit/char  H_av=0.041 bit/char
+ Z     | cnt=  1    p=0.005   H=7.516 bit/char  H_av=0.041 bit/char
+-------------------------------------------
+
+Average Entropy H = 4.281 bit/char
+Total Entropy of 183 characters H=783.34 bit = 98.00 byte
+
+---
+
+**2. Deine Kommentierung:**
+
+Die Entropie meines Textes beträgt etwa 4.281 bit pro Zeichen. Die Gesamtentropie liegt bei 783.34 bit. Auffällig ist, dass Leerzeichen und einige Buchstaben deutlich häufiger vorkommen als andere Zeichen. Dadurch ist die Zeichenverteilung nicht gleichmäßig. Wenn alle Zeichen ungefähr gleich häufig vorkommen würden, wäre die Entropie höher. Wenn wenige Zeichen besonders oft vorkommen, sinkt die Entropie.
