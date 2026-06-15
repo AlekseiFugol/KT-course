@@ -1,41 +1,72 @@
 # -*- coding: utf-8 -*-
 
 import math
+import os
+
 
 R = 30
 
-print("Bierdeckel-Telegraf")
-print("R =", R)
-print("Gesucht wird die optimale Basis B")
-print()
+try:
+    eingabe = input(f"Anzahl Bierdeckel R (Bezeichnungsraum) [Standard {R}]: ").strip()
+    if eingabe != "":
+        R = int(eingabe)
+except ValueError:
+    R = 30
 
-# Nur diese Werte teilen R = 30
-werte_B = [1, 2, 3, 5, 6, 10, 15, 30]
 
-beste_basis = None
-beste_stellen = None
-groesster_signalvorrat = 0
-groesster_informationsgehalt = 0
+ausgabe = []
 
-print(f"{'B':>4} | {'n = R/B':>8} | {'V = B^n':>12} | {'G = log2(V)':>14}")
-print("-" * 50)
+ausgabe.append("")
+ausgabe.append(f"Bierdeckel-Telegraf: R = {R} Deckel")
+ausgabe.append("B = Brauereien / Basis")
+ausgabe.append("n = R / B")
+ausgabe.append("V = B^n")
+ausgabe.append("G = log2(V)")
+ausgabe.append("=" * 60)
 
-for B in werte_B:
+moegliche_B = [1, 2, 3, 5, 6, 10, 15, 30]
+
+bestes_B = 1
+bestes_n = R
+bestes_V = 1
+bestes_G = 0.0
+
+ausgabe.append(f"{'B':>4} | {'n=R/B':>6} | {'V = B^n':>12} | {'G [bit]':>10}")
+ausgabe.append("-" * 45)
+
+for B in moegliche_B:
     n = R // B
     V = B ** n
     G = math.log2(V)
 
-    print(f"{B:>4} | {n:>8} | {V:>12} | {G:>14.2f}")
+    ausgabe.append(f"{B:>4} | {n:>6} | {V:>12} | {G:>10.2f}")
 
-    if G > groesster_informationsgehalt:
-        beste_basis = B
-        beste_stellen = n
-        groesster_signalvorrat = V
-        groesster_informationsgehalt = G
+    if G > bestes_G:
+        bestes_B = B
+        bestes_n = n
+        bestes_V = V
+        bestes_G = G
 
-print()
-print("Maximum:")
-print("Optimale Wahl B =", beste_basis)
-print("n =", beste_stellen)
-print("V_max =", groesster_signalvorrat)
-print("G_max =", round(groesster_informationsgehalt, 2), "bit")
+ausgabe.append("=" * 60)
+ausgabe.append("Maximum:")
+ausgabe.append(f"Optimale Wahl B = {bestes_B}")
+ausgabe.append(f"n = {bestes_n}")
+ausgabe.append(f"V_max = {bestes_V}")
+ausgabe.append(f"G_max = {bestes_G:.2f} bit")
+ausgabe.append("")
+ausgabe.append(f"Bei R = {R} ist also B = {bestes_B} die beste Wahl.")
+
+text = "\n".join(ausgabe)
+
+print(text)
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+submissions_dir = os.path.join(script_dir, "submissions")
+os.makedirs(submissions_dir, exist_ok=True)
+
+log_path = os.path.join(submissions_dir, "console_log.txt")
+
+with open(log_path, "w", encoding="utf-8") as file:
+    file.write(text)
+
+input("\nDruecke Enter zum Beenden...")
